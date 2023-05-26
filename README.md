@@ -13,7 +13,7 @@
 * You can change that in ElevatorConstants.java
 
 ## Elevators algorithm
-* On the start elevators are being initialized
+* At the beginning elevators are initialized
 * When elevator is called backend receives information about from which floor and to which floor it has to go
 * Person's weight is randomly generated in range 50-100 kg
 * If it comes to choosing elevator there are few steps:
@@ -48,3 +48,9 @@ docker-compose up
 ```
 
 ### frontend and backend has their readme files with examples on how to build&run docker images
+
+# Thoughts about this project
+### This project was done in a few hours that's why code style and algorithm for sure needs more work on it
+### My thoughts to improve this project:
+* Use websockets to call elevators
+* Take under consideration elevator's current direction and apply it to algorithm to increase performance
