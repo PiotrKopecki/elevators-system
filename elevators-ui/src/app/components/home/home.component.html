@@ -1,0 +1,42 @@
+<div class="content">
+    <div class="first-container" *ngIf="!systemStarted">
+        <h1>Choose number of elevators (1-16)</h1>
+        <div><input matInput type="number" name="range" min="1" max="16" (keyup)="changeRange($event)"></div>
+        <button class="number-button" (click)="start()" [disabled]="!isNumberValid()">Start</button>
+        <p *ngIf="!isNumberValid() && numberChanged" class="error">Wrong number</p>
+    </div>
+    <div class="second-container" *ngIf="systemStarted">
+        <h1>Elevators system with {{numberOfElevators}} elevators</h1>
+        <div class="elevator-container">
+            <div *ngFor="let row of elevators" class="elevator-column">
+              <div *ngFor="let floor of floors" class="elevator-row">
+                <div class="elevator" *ngIf="row.currentFloor === floor">
+                  <span class="floor-number">{{ floor }}</span>
+                  <span class="floor-persons">p: {{ row.personsInside }}</span>
+                  <span class="floor-load">l: {{ row.currentLoad }}</span>
+                  <div class="elevator-door"></div>
+                </div>
+                <div class="fake-elevator" *ngIf="row.currentFloor !== floor"></div>
+              </div>
+            </div>
+            <div class="floors-container">
+                <div *ngFor="let floor of floors" class="floor">
+                    <span>{{floor}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="floors-container2">
+          <div class="text" id="text2">p - number of persons inside</div>
+          <div class="text" id="text3">l - current load (randomly generated from range 50-100kg for each person)</div>
+          <div class="text">Call elevator</div>
+          <div class="floors-container3">
+            <div *ngFor="let floor of floors" class="floor2">
+                <span>Floor: {{floor}}</span>
+                <div>Call Elevator</div>
+                <div>to: <input matInput type="number" name="call-floor2" min="-2" max="2" (keyup)="changeRange2($event)"></div>
+                <button class="call-button2" (click)="callElevator(floor)" [disabled]="!isFloorValid()">Call</button>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>

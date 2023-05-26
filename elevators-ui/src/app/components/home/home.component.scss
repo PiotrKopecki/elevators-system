@@ -1,0 +1,146 @@
+.content {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    font-weight: bolder;
+}
+.first-container {
+    text-align: center;
+    display: block;
+    
+    .number-button{
+        margin-top: 1vh;
+        font-size: x-large;
+        color: white;
+        background-color: black;
+        border-radius: 5%;
+        border: 2px solid rgb(113, 105, 105);
+
+        &:disabled {
+            background-color: gray;
+        }
+    }
+    input {
+        font-size: large;
+    }
+}
+.second-container {
+    h1 {
+        color: darkred;
+        width: 100vw;
+        text-align: center;
+    }
+    .elevator-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .elevator-row {
+        display: flex;
+    }
+    .elevator-column {
+        flex: 1;
+        padding: 10px;
+    }
+    .elevator {
+        width: 70px;
+        height: 100px;
+        background-color: #ccc;
+        border-radius: 5px;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+    }
+    .fake-elevator {
+        width: 70px;
+        height: 100px;
+    }
+    .floor-number {
+        font-size: 18px;
+        font-weight: bold;
+        color: green;
+    }
+    .floor-persons {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 2px;
+        color: blue;
+    }
+    .floor-load {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 2px;
+        color: red;
+    }
+    .elevator-door {
+        width: 80%;
+        height: 10px;
+        background-color: #888;
+        margin-bottom: 10px;
+    }
+    .floor {
+        margin-inline: 1vw;
+        width: 80px;
+        height: 120px;
+        font-size: xx-large;
+        text-align: right;
+    }
+    .floors-container3 {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+    }
+    .text {
+        color: black !important;
+        text-align: center;
+        width: 100%;
+        font-size: x-large !important;
+    }
+    #text2 {
+        color: blue !important;
+    }
+    #text3 {
+        color: red !important;
+    }
+    .floors-container2 span{
+        font-size: medium;
+        color: red;
+    }
+    .floors-container2 div{
+        font-size: medium;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        color: white;
+    }
+    .floor2 {
+        margin-inline: 1vw;
+        width: 120px;
+        height: 140px;
+        background-color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        border: 2px solid black;
+        text-align: center;
+        justify-content: center;
+        color: white;
+    }
+    .call-button2 {
+        margin-top: 10px;
+        border-radius: 50%;
+        background-color: green;
+        font-size: large;
+        color: white;
+        border: 1px solid white;
+
+        &:disabled {
+            background-color: gray;
+        }
+    }
+}
+.error {
+    color: red;
+}
